@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap");
+/* -------------------------------- Resetting ------------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -------------------------------- Variables ------------------------------- */
+:root {
+  --pink-color: #ee2a7b;
+  --yellow-color: #fff000;
+  --gray: #e0e0e0;
+  --light-grey: #f7f7f7;
+}
+
+/* ----------------------------- General Styling ---------------------------- */
+body {
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* -------------------------------- Utilities ------------------------------- */
+/* Typography */
+.fs-7 {
+  font-size: clamp(23, 32px + 1vw, 3rem);
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.lh-mini {
+  letter-spacing: 0.45rem;
+}
+
+.lh-34px {
+  line-height: 34px;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+/* Colors */
+.text-black {
+  color: #000;
+}
+
+.text-pink {
+  color: var(--pink-color);
+}
+
+.text-yellow {
+  color: var(--yellow-color);
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-light-grey {
+  background-color: var(--light-grey);
+}
+
+.bg-gray {
+  background-color: var(--gray);
+}
+
+.bg-yellow {
+  background-color: var(--yellow-color);
+}
+
+.bg-lime {
+  background-color: rgba(255, 240, 0, 0.63);
+}
+
+.bg-fade-yellow {
+  background-color: rgba(255, 240, 0, 0.66);
+  border: 2px solid black !important;
+}
+/* Sizes */
+.w-120 {
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1;
+}
+
+.w-190 {
+  width: 190px;
+  height: 190px;
+  aspect-ratio: 1;
+}
+
+.w-250 {
+  width: 250px;
+}
+.h-max-content {
+  height: 100vh;
+}
+
+/* buttons */
+.btn-pink {
+  background-color: var(--pink-color);
+  border: 2px solid var(--pink-color);
+  color: white;
+  font-weight: bold;
+}
+
+.btn-yellow {
+  background-color: var(--yellow-color);
+  border: 2px solid var(--yellow-color);
+  color: #000;
+  font-weight: bold;
+}
+.btn-solid-yellow {
+  background-color: var(--yellow-color);
+  border: 2px solid var(--yellow-color);
+  color: #000;
+  font-weight: bold;
+}
+
+.btn-pink:hover {
+  background-color: transparent;
+  border: 2px solid var(--pink-color);
+  color: white;
+  font-weight: bold;
+}
+
+.btn-yellow:hover {
+  background-color: transparent;
+  border: 2px solid var(--yellow-color);
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-solid-yellow:hover {
+  background-color: var(--yellow-color);
+  color: #000;
+}
+
+/* Outlines */
+.border-pink {
+  border-color: var(--pink-color) !important;
+}
+
+.border-yellow {
+  border-color: var(--yellow-color) !important;
+}
+
+.stroke-pink {
+  color: transparent !important;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 800;
+  -webkit-text-stroke: 2px var(--pink-color);
+}
+
+.stroke-white {
+  text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff,
+    1px 1px 0 #ffff;
+}
+
+/* Box Shaodws */
+.bx-shadow {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+/* --------------------------------- Styling -------------------------------- */
+#nav {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  z-index: 999;
+}
+
+#mobile-nav {
+  z-index: 999;
+}
+
+.hero {
+  width: 100%;
+  /* height: calc(100vh - 144px); */
+  height: max-content;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.79),
+      rgba(0, 0, 0, 0.79)
+    ),
+    url("/assets/images/banner/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 553px;
+  box-shadow: -10px -10px #000, 0 10px var(--pink-color);
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  /* background-color: var(--yellow-color); */
+  position: relative;
+}
+
+.line-sm {
+  display: block;
+  width: 100px;
+  height: 2px;
+  /* background-color: var(--yellow-color); */
+  position: relative;
+}
+.line-md {
+  display: block;
+  width: 200px;
+  height: 2px;
+  /* background-color: var(--yellow-color); */
+  position: relative;
+}
+
+.line::before,
+.line-sm::before,
+.line-md::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: inherit;
+  /* triangle */
+  clip-path: polygon(0 0, 2% 100%, 100% 54%);
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line::after,
+.line-sm::after,
+.line-md::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 18px;
+  background-color: inherit;
+  /* rhombus */
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line-yellow {
+  background-color: var(--yellow-color);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
+}
+
+.line-pink {
+  background-color: var(--pink-color);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
+}
+
+.line-custom {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+.line-white {
+  background-color: #fff;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
+}
+
+.line-black {
+  background-color: #000;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
+}
+
+/* .triangle {
+
+} */
+
+#blogs {
+  width: 100%;
+  /* height: 500px; */
+  min-height: 500px;
+  background: url("/assets/images//blogs/blog-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.accordion-image {
+  width: 100%;
+  max-width: 500px;
+}
+
+.pink-input:focus,
+.pink-input:hover {
+  outline: none;
+  border: 2px solid var(--pink-color);
+}
+
+.input-icon {
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Owl Carousel Nav Buttons */
+.owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--pink-color);
+}
+
+.owl-prev {
+  position: relative;
+  left: -40px;
+  transform: rotate(180deg);
+  letter-spacing: -19px;
+}
+
+.owl-prev > span::after {
+  content: "-";
+}
+
+.owl-next {
+  position: relative;
+  left: 40px;
+  transform: rotate(180deg);
+  letter-spacing: -19px;
+}
+
+.owl-next > span::before {
+  content: "-";
+}
